@@ -1,0 +1,32 @@
+Jag hade skrivit en stor main som importerde alla labbar och därifrån kan man köra alla klasser
+men insåg att de kanske inte funkar för er eller så måste man ha en main i varje klass så jag har
+lagt till det också i slutet av varje klass om det inte går att fixa från Main :)
+
+1. (1.c)
+ * recursiv funktion som läser igenom en rad text tills nyrad läses in, funktionen kallar sig själv 
+ * så länge ny rad inte läses in. sedan backar funktonen och printar ut tecken en efter en
+  (1.c)
+   Iterativa funktionen har en fixad array storlek och hela arrayen fylls med chars tills den är full eller om ny rad läses in,
+   varje gång en ny char läses in så så öker g (antalet element) om ny rad läses in så minskar en g eftersom ny rad räknas inte som element
+   sedan printas arrayen ut bakifrån för att få strängen reverse
+     
+recursiva funktioner får oftast mindre kod men sämre timecomplexity än iterativa funktioner. 
+
+2. (reverse & reverse2 & stacken )den recursiva funktionen funkar på i princip samma sätt som på c men men den iterativa funktionen använder
+Stack som datastruktur. detta funkar bra till en reverse funktion eftersom stacken är LIFO Alltså kan man bara pusha in och sedan 
+poppa ut allt utan att behöva tänka så mycket på att flyttar runt saker. min stack implemeterades med en linked list eftersom jag inte ville tänka 
+något på att ändra storleken på arrayen. Var inte helt säker om storleken va fixed som i första upgiften annars skulle array va ett bättre val för mig
+
+3.(DLCQueue.java)I denna labb ska en generic iterable circular FIFO-double linked-queue göras. Jag använde inte en sentinell utan har en first och last nod.
+den inre nod klassen har en previus också och det är de som gör den double linked. desutom länkas first och last i enqueue och dequeue vilket gör den
+cirkulär. iteratorn används i tostring för att iterera genom hela kön.
+
+4.(Cll.java)skapades en generic iterable circular linked list som tillåter användaren att till och radera element från fram och baksidan.enqueue och dequeue kopplar alltid 
+första och sista noden så den alltid är cirkulär. First är elementet längst till vänster när man printar ut och last e längst till höger. iteratorn och tostring fungerar som tidigare labben
+
+5.(Gqueue.java) Denna klass implementerar en generelized queue som är single linked och tillåter användaren att radera ett element i listan, element 1 är det som senast lags till
+jag valde single linked eftersom det kändes lättare att göra en remove funktion med.
+
+6.(orderQueue.java)I den här labben använde jag bara en vanlig queue med linked list för att skapa en priority queue. alla nya värden som läggs till i kön sorteras direkt vid 
+insättning. jag valde att att inte göra kön generaliseradd eftersom det stog i uppgiften att endast integers kommer att sorteras. jag har valde också single linked list men tror att det skulle vara 
+nu i efterhand med nån typ av double linked list lösning eftrsom då kan man gå fram och tillbaka. 

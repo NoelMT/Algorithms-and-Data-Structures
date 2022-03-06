@@ -1,0 +1,45 @@
+generating input
+
+what are good values for the seed an? 
+- stora primtal är bra seeds (best statistical properties)
+
+Varför ska man använda rando() istället för rand()???
+the lower-order bits are much less random than the higher-order bits. 
+
+SHUFFLE
+-In iteration i, generate a random integer r in the interval 0 to i.
+-Swap a[i]and a[r].
+
+TIMEMEASUREMENTS:
+tiden mättes med en java metod som heter currenttimemillis som har räknat antalet millisekunder från
+midnatt 1 jan år 1970 tror det heter epoch time, kollar tiden innnan och efter sorteringen sedan tar skillnaden
+för att få exekveringstiden.
+
+TESTFILER:
+alla tester har genererats med generation input. 10,100,1000,10000,100000,500000,750000,1000000 st element
+i text filer har genererats och maxint har varit antalet element i varje textfil.
+
+1an:
+allt finns i one.java
+2an:
+uträckningen för timecomplexity finns two.java
+3an:
+förklaring och timecomplexity finns i three.c
+4an:
+When should one select one method over the others?
+insertsort sorterar snabbare för små sets(kräver också mindre minne) plus att insert sort ör både stable och in place, quick sort och mergesort är mer
+effektiva och snabbare men långsamare för små sets pga overhead eftersom de är rekursiva
+funktioner. merge sort är stabil men inte in place så används när man vill ha ordnad set.
+quicksort ör snabbare i practiken även om komplexiteten e sämre, den är in place så ingen auxillery memory används
+
+5an:
+alla cutof gränser ser ut att va lite snabbare än vanlig merge men mellan 21 och 30 får man snabbare 
+körningstid vid de större testerna (ca en miljon element). 
+
+6an:
+Mina tester visar att 3way partitioning är lite snabbare än vanlig quicksort men eftersom att man 
+shufflar och bara kollar på 3 element så handlar det lite om tur också, att kontrolen efter median 
+elementet går snabbare ön valen första elementet som median.men såg ca 9% förbättring på en million element.
+7an:
+innan sorteringen så multiplicerades alla elementen med -1 så att det största elementet blir det minsta
+sedan sorteras alla elementen och multipliceras en gång till och då har men arrayen i minskande ordning. 
